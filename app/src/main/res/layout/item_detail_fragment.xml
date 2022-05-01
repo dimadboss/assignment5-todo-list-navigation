@@ -10,6 +10,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="61dp" />
+
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
@@ -22,7 +26,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="111dp" />
+                android:layout_height="61dp" />
 
             <TextView
                 android:id="@+id/description"

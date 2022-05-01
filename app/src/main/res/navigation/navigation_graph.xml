@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/todolist_fragment"
         android:name="com.mmcs.todolist.todo_list.TodoListFragment"
-        android:label=" "
+        android:label="Todo list"
         tools:layout="@layout/todolist_fragment">
         <action
             android:id="@+id/action_todolist_fragment_to_itemDetailFragment"
@@ -17,15 +17,17 @@
             android:id="@+id/action_todolist_fragment_to_addItemFragment"
             app:destination="@id/addItemFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/addItemFragment"
         android:name="com.mmcs.todolist.add_item_fragment.AddItemFragment"
         android:label="AddItemFragment"
         tools:layout="@layout/add_item_fragment" />
+
     <fragment
         android:id="@+id/itemDetailFragment"
         android:name="com.mmcs.todolist.item_detail_fragment.ItemDetailFragment"
-        android:label="ItemDetailFragment"
+        android:label="Item Detail Fragment"
         tools:layout="@layout/item_detail_fragment">
         <argument
             android:name="title"
@@ -35,4 +37,5 @@
             android:name="description"
             app:argType="string" />
     </fragment>
+
 </navigation>

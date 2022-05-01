@@ -11,7 +11,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@null"
+        android:background="#2A5E35B1"
         android:elevation="0dp"
         app:elevation="0dp">
 
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_collapseMode="pin"
-            app:titleTextColor="?colorOnPrimary" />
+            app:titleTextColor="#A6000000" />
     </com.google.android.material.appbar.AppBarLayout>
 
 
