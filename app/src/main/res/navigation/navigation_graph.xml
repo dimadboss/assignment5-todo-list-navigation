@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/todolist_fragment">
+
+    <fragment
+        android:id="@+id/todolist_fragment"
+        android:name="com.mmcs.todolist.todo_list.TodoListFragment"
+        android:label=" "
+        tools:layout="@layout/todolist_fragment">
+        <action
+            android:id="@+id/action_todolist_fragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_todolist_fragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.mmcs.todolist.add_item_fragment.AddItemFragment"
+        android:label="AddItemFragment"
+        tools:layout="@layout/add_item_fragment" />
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.mmcs.todolist.item_detail_fragment.ItemDetailFragment"
+        android:label="ItemDetailFragment"
+        tools:layout="@layout/item_detail_fragment">
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+        <argument
+            android:name="description"
+            app:argType="string" />
+    </fragment>
+</navigation>
