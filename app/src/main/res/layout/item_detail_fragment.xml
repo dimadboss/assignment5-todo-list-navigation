@@ -18,7 +18,7 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Title"
+                android:text="@string/title"
                 android:textAlignment="center"
                 android:textColor="@color/purple_700"
                 android:textSize="34sp"
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5pt"
-                android:text="Description"
+                android:text="@string/description"
                 android:textAlignment="viewStart"
                 android:textColor="@color/purple_500"
                 android:textSize="24sp" />
