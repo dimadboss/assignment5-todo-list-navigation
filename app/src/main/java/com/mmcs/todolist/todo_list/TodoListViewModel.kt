@@ -25,7 +25,7 @@ class TodoListViewModel(application: Application) : AndroidViewModel(application
 
     init {
         if (_todoItems.value.isNullOrEmpty()) {
-            _todoItems.value = IntRange(0, 5).map {
+            _todoItems.value = IntRange(0, 50).map {
                 TodoModel(
                     id = UUID.randomUUID().toString(),
                     title = "Some title # $it",
