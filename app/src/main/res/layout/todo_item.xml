@@ -10,7 +10,7 @@
 
         <variable
             name="item"
-            type="com.mmcs.todolist.todo_list.TodoModel" />
+            type="com.mmcs.todolist.TodoModel" />
     </data>
 
     <LinearLayout

@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -13,7 +12,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mmcs.todolist.R
 import com.mmcs.todolist.databinding.TodolistFragmentBinding
-import com.mmcs.todolist.item_detail_fragment.ItemDetailFragmentArgs
 
 class TodoListFragment : Fragment() {
     private val viewModel: TodoListViewModel by lazy {
@@ -55,5 +53,7 @@ class TodoListFragment : Fragment() {
                 TodoListFragmentDirections.actionTodolistFragmentToAddItemFragment()
             )
         }
+        val arguments: TodoListFragmentArgs by navArgs()
+        arguments.newTodoItem?.let { viewModel.insertItem(it) }
     }
 }
