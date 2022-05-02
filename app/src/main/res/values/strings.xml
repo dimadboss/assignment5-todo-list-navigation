@@ -3,4 +3,7 @@
     <string name="description">Description</string>
     <string name="title">Title</string>
     <string name="AddButtonText">+</string>
+    <string name="title_hint">enter new title</string>
+    <string name="description_hint">enter new description</string>
+    <string name="button_complete_hint">Add</string>
 </resources>

@@ -18,15 +18,24 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="5pt"
                 android:text="@string/title"
-                android:textAlignment="center"
+                android:textAlignment="viewStart"
                 android:textColor="@color/purple_700"
-                android:textSize="34sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <Space
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="61dp" />
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#1ABB86FC"
+                    android:hint="@string/title_hint"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/description"
@@ -38,11 +47,28 @@
                 android:textColor="@color/purple_500"
                 android:textSize="24sp" />
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#1ABB86FC"
+                    android:hint="@string/description_hint"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="61dp" />
+
             <Button
                 android:id="@+id/buttonComplete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="5pt"
+                android:text="@string/button_complete_hint" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
