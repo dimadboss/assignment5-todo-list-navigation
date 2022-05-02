@@ -14,20 +14,25 @@ class TodoListViewModel(application: Application) : AndroidViewModel(application
         get() = _todoItems
 
     fun insertItem(item: TodoModel) {
+        if (_todoItems.value?.any { it -> it.id == item.id } == true) {
+            return
+        }
         val newList: MutableList<TodoModel> = ArrayList()
-        newList.addAll(_todoItems.value ?: newList)
         newList.add(item)
+        newList.addAll(_todoItems.value ?: newList)
         _todoItems.value = newList.toList()
     }
 
     init {
-        _todoItems.value = IntRange(0, 5).map {
-            TodoModel(
-                id = UUID.randomUUID().toString(),
-                title = "Some title # $it",
-                description = "Item detail info # $it.",
-                checked = (it % 5 == 3 || it % 7 == 1)
-            )
+        if (_todoItems.value.isNullOrEmpty()) {
+            _todoItems.value = IntRange(0, 5).map {
+                TodoModel(
+                    id = UUID.randomUUID().toString(),
+                    title = "Some title # $it",
+                    description = "Item detail info # $it.",
+                    checked = (it % 5 == 3 || it % 7 == 1)
+                )
+            }
         }
     }
 }
